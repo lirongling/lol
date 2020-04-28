@@ -19,6 +19,10 @@ export default ({ app }, inject) => {
             heroDetail(id) {
                 return $axios.get(`/game/images/lol/act/img/js/hero/${id}.js`)
             },
+            // 获取专题页数据
+            getFeatured() {
+                return $axios.get(`/api/v1/zh_cn/explore/index.json`)
+            }
         }
         // 全局注入 拥有了一个this.$api对象
     inject('api', api)

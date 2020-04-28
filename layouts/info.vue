@@ -54,7 +54,7 @@
               <a class="head-nav-sub-a">攻略中心</a>
               <a class="head-nav-sub-a">开发者基地</a>
               <a class="head-nav-sub-a">海克斯战利品库</a>
-              <a class="head-nav-sub-a">英雄联盟宇宙</a>
+              <a class="head-nav-sub-a" @click="goUniverse">英雄联盟宇宙</a>
             </li>
           </ul>
         </div>
@@ -80,7 +80,12 @@ export default {
   },
   components: {},
   props: {},
-  methods: {},
+  methods: {
+    // 跳转到宇宙
+    goUniverse() {
+      this.$router.push("/universe");
+    }
+  },
   mounted() {},
 
   watch: {},
@@ -165,6 +170,9 @@ export default {
             float: left;
             height: auto;
             overflow: visible;
+            a:hover {
+              cursor: pointer;
+            }
             .head-nav-sub-a {
               display: block;
               width: 100%;
