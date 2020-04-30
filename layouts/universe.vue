@@ -59,7 +59,9 @@
         </div>
       </div>
     </header>
-    <nuxt />
+    <div class="main">
+      <nuxt />
+    </div>
   </div>
 </template>
 
@@ -95,6 +97,7 @@ export default {
       if (index === 0) {
         a = "universe";
       }
+      this.$router.push(`/${a}`);
     }
   },
   mounted() {},
@@ -104,6 +107,11 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+// .main {
+//   background-image: linear-gradient(180deg, #0a0a0c, rgba(0, 0, 0, 0), #0a0a0c);
+//   background-color: rgba(0, 0, 0, 0.8);
+//   min-height: 100vh;
+// }
 .lcf_yxlm_nav {
   background-color: #121212;
   height: 62px;

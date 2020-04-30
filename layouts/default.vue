@@ -16,6 +16,9 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
+body {
+  background-color: #0a0a0c;
+}
 
 *,
 *:before,

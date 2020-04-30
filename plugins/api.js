@@ -22,7 +22,11 @@ export default ({ app }, inject) => {
             // 获取专题页数据
             getFeatured() {
                 return $axios.get(`/api/v1/zh_cn/explore/index.json`)
-            }
+            },
+            // 英雄列表
+            HeroList() {
+                return $axios.get(`/api/v1/zh_cn/search/index.json`)
+            },
         }
         // 全局注入 拥有了一个this.$api对象
     inject('api', api)
